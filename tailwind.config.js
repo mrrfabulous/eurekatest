@@ -1,6 +1,8 @@
 module.exports = {
   content: [
-    "./**/*.{html,js}",
+    "./*.html",
+    "./src/**/*.js",
+    //"./**/*.{html,js}",
     // "./src/**/*.{html,js}",
   ],
   darkMode: "selector",

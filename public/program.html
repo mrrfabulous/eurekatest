@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eureka</title>
+    <link rel="stylesheet" href="/output.css" />
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script defer src="/src/scripts/main.js"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/b4b8be07f5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="dark:bg-dark dark:text-white">
+    <header class="sticky top-0 left-0 z-50 bg-secondary dark:bg-dark">
+      <nav class="flex justify-between items-center py-5 container">
+        <a class="translate-y-1" href="/">
+          <img
+            src="/images/logo.png"
+            alt="Eureka"
+            class="eurekaLogo scale-150 translate-x-5 md:scale-100 md:translate-x-0"
+          />
+        </a>
+
+        <div
+          class="relative flex items-center min-w-[75%] justify-between gap-20"
+          id="nav-bar"
+        >
+          <!-- Nav Items -->
+          <ul
+            class="gap-3 relative items-center text-black dark:text-white hidden md:flex justify-between lg:gap-12"
+          >
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="/">Home</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="/#events">Event</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary active">
+              <a href="./program.html">Blog</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="./faq.html">FAQ</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="./contact.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- Toggle Switch formerly here-->
+
+          <button
+            class="hidden md:block bg-primary p-3 lg:px-4 xl:px-6 max-w-28 xl:max-w-none rounded-[2rem] font-lato font-bold text-white cursor-pointer hover:opacity-90 scale-105"
+          >
+            <a href="register.html"> Become an Advocate </a>
+          </button>
+        </div>
+
+        <!-- Toggle Switch -->
+        <label
+          class="flex items-center cursor-pointer absolute right-[20%] md:right-[25%] xl:right-[30%]"
+        >
+          <div class="relative">
+            <input id="theme-toggle" type="checkbox" class="sr-only" />
+            <!-- Switch Background -->
+            <div
+              class="block bg-black w-[70px] h-9 rounded-full dark:bg-blue-200 transition-all duration-150"
+            ></div>
+            <!-- Switch Icon -->
+            <div
+              class="switchIcon absolute right-1 top-1 rounded-full transition-transform h-7 w-7"
+            >
+              <div id="lightIcon" class="relative">
+                <img src="/images/icons/Toggle.png" alt="" />
+                <img
+                  src="/images/icons/clouds.png"
+                  alt=""
+                  class="absolute scale-75 -right-2 top-1/2 -translate-y-1/2"
+                />
+              </div>
+              <div
+                id="darkIcon"
+                class="bg-white w-full h-full rounded-full hidden"
+              >
+                <div
+                  class="bg-dark w-full h-full rounded-full -translate-x-2"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </label>
+
+        <!-- Mobile Nav Bar -->
+        <div
+          class="container absolute top-24 left-0 w-full py-10 hidden flex-col items-start justify-center gap-6 rounded-lg bg-secondary dark:bg-dark md:hidden"
+          id="mobileNav"
+        >
+          <ul
+            class="flex flex-col gap-12 md:relative md:flex-row md:items-center text-black dark:text-white"
+          >
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="/">Home</a>
+            </li>
+
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="/#events">Event</a>
+            </li>
+
+            <li class="font-sans font-bold hover:text-primary active">
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="./faq.html">FAQ</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="./program.html">Blog</a>
+            </li>
+          </ul>
+          <button
+            class="bg-primary mt-3 p-3 px-6 rounded-[2rem] font-lato font-bold text-white cursor-pointer hover:opacity-90 scale-105"
+          >
+            <a href="register.html"> Become an Advocate </a>
+          </button>
+        </div>
+
+        <div class="block md:hidden text-black dark:text-white">
+          <span class="material-symbols-outlined" id="openMenu">
+            &#xe5d2;
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      id="header"
+      class="container flex flex-col items-start justify-between py-10 gap-10 lg:flex-row lg:gap-20 lg:items-center"
+    >
+      <div
+        class="relative w-full p-1 rounded-xl bg-gray-300 max-w-80 focus-within:border-primary focus-within:border-2 dark:text-dark"
+      >
+        <span class="absolute left-4 top-1/2 -translate-y-1/2">
+          <i class="fa-solid fa-magnifying-glass opacity-60"></i>
+        </span>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          class="w-full p-1 pl-10 text-sm font-semibold outline-none bg-transparent"
+          placeholder="Search a topic"
+        />
+      </div>
+      <ul
+        class="flex items-start justify-start w-full gap-3 overflow-x-scroll md:w-10/12 md:gap-10 md:justify-between md:items-center hide-scrollbar"
+      >
+        <li
+          class="mini-nav cursor-pointer font-bold capitalize hover:text-primary opacity-80 whitespace-nowrap"
+          onclick="showSection('trendingNow')"
+        >
+          Trending Now
+        </li>
+        <li
+          class="mini-nav cursor-pointer font-bold capitalize hover:text-primary opacity-80"
+          onclick="showSection('technology')"
+        >
+          Technology
+        </li>
+        <li
+          class="mini-nav cursor-pointer font-bold capitalize hover:text-primary opacity-80"
+          onclick="showSection('sports')"
+        >
+          Sports
+        </li>
+        <li
+          class="mini-nav cursor-pointer font-bold capitalize hover:text-primary opacity-80"
+          onclick="showSection('entertainment')"
+        >
+          Entertainment
+        </li>
+        <li
+          class="mini-nav cursor-pointer font-bold capitalize hover:text-primary opacity-80"
+          onclick="showSection('marketing')"
+        >
+          Marketing
+        </li>
+        <li
+          class="mini-nav cursor-pointer font-bold capitalize hover:text-primary opacity-80"
+          onclick="showSection('politics')"
+        >
+          Politics
+        </li>
+      </ul>
+    </div>
+
+    <div
+      id="programContent"
+      class="container flex flex-wrap gap-8 items-center justify-between mb-8 md:items-start"
+    ></div>
+    <template id="cardTemplate">
+      <div class="card w-full max-w-[350px] space-y-4 text-[15px]">
+        <div class="image-container w-full h-[240px]">
+          <img src="" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="cardContent space-y-3">
+          <h4 class="font-bold"></h4>
+          <p class="opacity-50 text-[13px]"></p>
+          <h6 class="font-bold text-[11px]"></h6>
+          <a
+            href="#"
+            class="bg-primary rounded-[5px] p-2 font-bold text-white text-[12px] inline-flex items-center justify-between gap-x-2 hover:bg-opacity-85 readArticle"
+          >
+            <span>Read article </span>
+            <span
+              class="border-2 border-white rounded-full inline-flex items-center w-4 h-4"
+              ><i class="fa-solid fa-arrow-right text-[9px]"></i></span
+          ></a>
+        </div>
+      </div>
+    </template>
+
+    <script type="module">
+      import {
+        trendingNow,
+        technology,
+        marketing,
+        entertainment,
+        politics,
+        sports,
+      } from "./src/scripts/data.js";
+
+      // Function to render card dynamically
+      const renderCards = (cards) => {
+        const contentDiv = document.getElementById("programContent");
+        contentDiv.innerHTML = "";
+
+        cards.forEach((card) => {
+          const cardTemplate = document
+            .querySelector("#cardTemplate")
+            .content.cloneNode(true);
+
+          const cardDiv = cardTemplate.querySelector(".card");
+          const image = cardDiv.querySelector("img");
+          const title = cardDiv.querySelector("h4");
+          const details = cardDiv.querySelector("p");
+          const cardDate = cardDiv.querySelector("h6");
+          const cardLink = cardDiv.querySelector("a");
+
+          image.src = card.image;
+          image.alt = card.title;
+          title.textContent = card.title;
+          details.textContent = card.content;
+          cardDate.textContent = card.date;
+
+          cardLink.href = `./program.html#${card.title.replace(/\s+/g, "_")}`;
+          cardLink.onclick = (e) => {
+            e.preventDefault();
+            navigateTo(card);
+          };
+
+          contentDiv.appendChild(cardDiv);
+        });
+      };
+
+      //  function to navigate to differnt section on the page
+      const showSection = (section) => {
+        const miniNavs = document.querySelectorAll(".mini-nav");
+        miniNavs.forEach((nav) => nav.classList.remove("active"));
+
+        if (section === "trendingNow") {
+          renderCards(trendingNow);
+          document
+            .querySelector(`.mini-nav[onclick="showSection('trendingNow')"]`)
+            .classList.add("active");
+        } else if (section === "technology") {
+          renderCards(technology);
+          document
+            .querySelector(`.mini-nav[onclick="showSection('technology')"]`)
+            .classList.add("active");
+        } else if (section === "marketing") {
+          renderCards(marketing);
+          document
+            .querySelector(`.mini-nav[onclick="showSection('marketing')"]`)
+            .classList.add("active");
+        } else if (section === "sports") {
+          renderCards(sports);
+          document
+            .querySelector(`.mini-nav[onclick="showSection('sports')"]`)
+            .classList.add("active");
+        } else if (section === "politics") {
+          renderCards(politics);
+          document
+            .querySelector(`.mini-nav[onclick="showSection('politics')"]`)
+            .classList.add("active");
+        } else if (section === "entertainment") {
+          renderCards(entertainment);
+          document
+            .querySelector(`.mini-nav[onclick="showSection('entertainment')"]`)
+            .classList.add("active");
+        }
+      };
+
+      window.showSection = showSection;
+
+      // function to render the article of each card clicked
+      const navigateTo = (card) => {
+        const contentDiv = document.getElementById("programContent");
+        contentDiv.innerHTML = `
+          <div class="container flex flex-col items-center gap-8 w-full max-w-[1024px] mx-auto">
+            <h1 class="font-bold text-3xl uppercase">${card.title}</h1>
+            <img src="${card.image}" alt="${card.title} class="w-full h-autp md:w-auto md:h-80" />
+            <p class="font-semibold">${card.content}</p>
+            <p class="text-base text-justify">${card.article}</p>
+            <p class="text-base text-justify">${card.article}</p>
+            <p class="font-bold italic">Date: ${card.date}</p>
+          </div>
+            `;
+
+        // Displaying the param but not working active now
+        history.pushState(
+          null,
+          "",
+          `./program.html#${card.title.replace(/\s+/g, "_")}`
+        );
+      };
+
+      showSection("trendingNow");
+    </script>
+  </body>
+</html>

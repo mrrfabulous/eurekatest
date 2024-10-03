@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eureka</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body
+    class="h-screen flex flex-col items-center justify-center relative overflow-hidden dark:bg-dark dark:text-white"
+  >
+    <header class="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full container">
+      <nav class="flex justify-between items-center py-5">
+        <a class="scale-75 translate-y-1" href="/">
+          <img
+            src="/images/logo.png"
+            alt="Eureka"
+            class="eurekaLogo scale-150 translate-x-5 md:scale-100 md:translate-x-0"
+          />
+        </a>
+
+        <div
+          class="relative hidden md:flex items-center gap-6 justify-between min-w-[75%]"
+          id="nav-bar"
+        >
+          <ul class="flex gap-14 relative items-center">
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="/">Home</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="#about">About Us</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="#events">Event</a>
+            </li>
+
+            <li class="text-white font-sans font-bold hover:text-black">
+              <a href="./contact.html">Programs</a>
+            </li>
+            <li class="text-white font-sans font-bold hover:text-black">
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li class="text-white font-sans font-bold hover:text-black">
+              <a href="./faq.html">FAQ</a>
+            </li>
+            <li class="text-white font-sans font-bold hover:text-black">
+              <a href="./program.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Toggle Switch -->
+        <label
+          class="flex items-center cursor-pointer absolute right-[20%] md:right-[25%] xl:right-0"
+        >
+          <div class="relative">
+            <input id="theme-toggle" type="checkbox" class="sr-only" />
+            <!-- Switch Background -->
+            <div
+              class="block bg-black w-[70px] h-9 rounded-full dark:bg-blue-200 transition-all duration-150"
+            ></div>
+            <!-- Switch Icon -->
+            <div
+              class="switchIcon absolute right-1 top-1 rounded-full transition-transform h-7 w-7"
+            >
+              <div id="lightIcon" class="relative">
+                <img src="/images/icons/Toggle.png" alt="" />
+                <img
+                  src="/images/icons/clouds.png"
+                  alt=""
+                  class="absolute scale-75 -right-2 top-1/2 -translate-y-1/2"
+                />
+              </div>
+              <div
+                id="darkIcon"
+                class="bg-white w-full h-full rounded-full hidden"
+              >
+                <div
+                  class="bg-dark w-full h-full rounded-full -translate-x-2"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </label>
+
+        <!-- Mobile Nav Bar -->
+        <div
+          class="container absolute top-24 left-0 w-full py-10 hidden flex-col items-start justify-center gap-6 rounded-lg bg-secondary md:hidden"
+          id="mobileNav"
+        >
+          <ul
+            class="flex flex-col gap-12 md:relative md:flex-row md:items-center"
+          >
+            <li class="font-sans font-bold hover:text-primary active">
+              <a href="/">Home</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="#about">About Us</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="#events">Event</a>
+            </li>
+
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="./contact.html">Contact Us</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="./faq.html">FAQ</a>
+            </li>
+            <li class="font-sans font-bold hover:text-primary">
+              <a href="./program.html">Blog</a>
+            </li>
+          </ul>
+          <button
+            class="bg-primary mt-3 p-3 px-6 rounded-[2rem] font-lato font-bold text-white cursor-pointer hover:opacity-90 scale-105"
+          >
+            <a href="register.html"> Become an Advocate </a>
+          </button>
+        </div>
+
+        <div class="block md:hidden">
+          <span class="material-symbols-outlined" id="openMenu">
+            &#xe5d2;
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      class="flex flex-col md:flex-row-reverse gap-10 h-full w-full items-center justify-center"
+    >
+      <div
+        id="image-container"
+        class="hidden w-full md:w-1/2 md:flex items-center justify-center relative"
+      >
+        <img
+          id="register-image"
+          src="./images//team.png"
+          alt="Register"
+          class="max-h-full w-full object-cover"
+        />
+        <div
+          class="bg-[#E4F1FF] text-black max-w-md h-fit w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[20px] p-6 px-8 text-center pb-10"
+        >
+          <h1 class="text-[28px] font-bold">Already signed up?</h1>
+          <p class="text-[20px] opacity-80 mt-5 mb-12">
+            Login your account so you can learn and explore more from Eureka.
+          </p>
+          <a
+            href="/signIn.html"
+            class="text-[#006BE5] font-bold text-[20px] p-2 px-24 rounded-[25px] border-2 border-[#006BE5] cursor-pointer hover:bg-[#006BE5] hover:text-white transition ease-in-out duration-150"
+          >
+            LOG IN
+          </a>
+        </div>
+      </div>
+
+      <!-- Forms -->
+      <div
+        id="form-container"
+        class="w-full h-full md:w-1/2 flex flex-col p-8 lg:px-12 rounded-lg pt-28 pb-0"
+      >
+        <div
+          class="h-fit overflow-y-scroll hide-scrollbar flex flex-col justify-start"
+        >
+          <!-- form one -->
+          <form id="signUpForm" class="form mb-5">
+            <h3
+              class="text-xl lg:text-3xl font-bold mb-6 tracking-wider lg:text-start text-flip-container"
+            >
+              Join the community and <br />become
+              <span class="text-primary" id="text-container">an Advocate.</span>
+            </h3>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >Full Name</label
+              >
+              <input
+                id="leadership-experience"
+                type="text"
+                required
+                placeholder="John Doe"
+                class="p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >Gender</label
+              >
+              <input
+                id="leadership-position"
+                type="text"
+                placeholder="Male"
+                required
+                class="p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >Institution</label
+              >
+              <input
+                id="leader-attributes"
+                type="text"
+                placeholder="Harvard"
+                required
+                class="p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >Level</label
+              >
+              <input
+                id="how-know-eureka"
+                type="text"
+                placeholder="300"
+                required
+                class="p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >Current CGPA</label
+              >
+              <input
+                id="how-know-eureka"
+                type="text"
+                placeholder="4.34"
+                required
+                class="p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="form-group w-full">
+              <button
+                id="continue-button"
+                type="button"
+                class="bg-primary w-full text-white px-4 mt-5 py-2 rounded-full disabled:bg-[#D9D9D9] disabled:text-gray-500 disabled:cursor-not-allowed"
+                disabled
+              >
+                Continue
+              </button>
+            </div>
+          </form>
+
+          <!-- Form two -->
+          <form id="second-form" class="form hidden">
+            <h3
+              class="text-xl lg:text-3xl font-bold mb-6 tracking-wider lg:text-start text-flip-container"
+            >
+              Join the community and <br />become
+              <span class="text-primary" id="text-container2">an Advocate</span>
+            </h3>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >Do you have a leadership experience in the institution?</label
+              >
+              <input
+                id="advocate-reason"
+                type="text"
+                required
+                placeholder="Your reason"
+                class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >If yes, which position was that?</label
+              >
+              <input
+                id="leadership-experience"
+                type="text"
+                required
+                placeholder="Yes"
+                class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >Give us your three attributes of a leader you find dear.</label
+              >
+              <input
+                id="leadership-position"
+                type="text"
+                required
+                placeholder="SUG President"
+                class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block text-black font-semibold dark:text-white"
+                >Tell us how you know about Eureka.</label
+              >
+              <input
+                id="leader-attributes"
+                type="text"
+                required
+                placeholder="Money minded, Disciplined, Smart."
+                class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
+              />
+            </div>
+            <div class="form-group w-full">
+              <button
+                id="apply-button"
+                type="button"
+                class="bg-primary w-full text-white px-4 py-2 mt-5 rounded-full disabled:bg-[#D9D9D9] disabled:text-gray-500 disabled:cursor-not-allowed"
+                disabled
+              >
+                Apply
+              </button>
+            </div>
+          </form>
+
+          <!-- Dots -->
+          <div class="flex justify-center mt-4 mb-8">
+            <span id="dot1" class="dot active"></span>
+            <span id="dot2" class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPUP animation -->
+    <div class="submit_popup" id="submit_popup">
+      <!-- Loader -->
+      <div
+        class="submit_loader flex justify-center items-center"
+        id="submit_loader"
+      >
+        <div class="flex items-center justify-center h-full w-full">
+          <img src="./images/loader.gif" class="object-cover" alt="preloader" />
+        </div>
+      </div>
+      <!-- Popup  -->
+      <div
+        class="submit_success container bg-white rounded-xl w-full h-fit max-w-[580px] items-center justify-center translate-y-5 py-12 dark:bg-dark"
+        id="submit_success"
+      >
+        <div
+          class="flex-col flex items-center justify-center gap-10 h-full w-full"
+        >
+          <img src="" alt="" />
+
+          <div
+            class="flex flex-col items-center w-full text-primary gap-3 dark:text-white"
+          >
+            <h1 class="font-bold text-center text-3xl pb-2">
+              Registration Successful!
+            </h1>
+            <!-- <p class="font-semibold text-center text-lg">
+              We get back to you via email, thank you.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/scripts/main.js"></script>
+  </body>
+</html>
