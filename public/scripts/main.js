@@ -342,6 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dot = document.querySelector(".switchIcon");
     const lightIcon = document.getElementById("lightIcon");
     const darkIcon = document.getElementById("darkIcon");
+    const cloud = document.getElementById("cloud");
 
     // Load the user's preference from localStorage
     if (localStorage.getItem("darkMode") === "enabled") {
@@ -367,15 +368,25 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("darkMode", "enabled");
         logos.forEach((logo) => (logo.src = "/images/white_logo.png"));
         dot.style.transform = "translateX(-120%)";
-        lightIcon.style.display = "block";
-        darkIcon.style.display = "none";
+        cloud.classList.remove("cloud-out");
+        cloud.classList.add("cloud-in");
+
+        setTimeout(() => {
+          lightIcon.style.display = "block";
+          darkIcon.style.display = "none";
+        }, 100);
       } else {
         htmlElement.classList.remove("dark");
         localStorage.setItem("darkMode", "disabled");
         logos.forEach((logo) => (logo.src = "/images/logo.png"));
         dot.style.transform = "translateX(0)";
-        lightIcon.style.display = "none";
-        darkIcon.style.display = "block";
+        cloud.classList.remove("cloud-in");
+        cloud.classList.add("cloud-out");
+
+        setTimeout(() => {
+          lightIcon.style.display = "none";
+          darkIcon.style.display = "block";
+        }, 400);
       }
     });
   }

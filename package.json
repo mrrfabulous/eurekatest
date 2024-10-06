@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "watch": "npx tailwindcss -i ./src/styles/main.css -o ./dist/output.css --watch",
-    "build": "postcss src/styles/main.css -o public/output.css"
+    "build": "npx postcss src/styles/main.css -o public/output.css"
   },
   "author": "MISTECH",
   "license": "ISC",

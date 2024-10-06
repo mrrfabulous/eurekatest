@@ -342,40 +342,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const dot = document.querySelector(".switchIcon");
     const lightIcon = document.getElementById("lightIcon");
     const darkIcon = document.getElementById("darkIcon");
-    // const fbI = document.getElementById("fbI");
-    // const waI = document.getElementById("waI");
-    // const twI = document.getElementById("twI");
-    // const tgI = document.getElementById("tgI");
-    // const inI = document.getElementById("inI");
+    const cloud = document.getElementById("cloud");
 
     // Load the user's preference from localStorage
     if (localStorage.getItem("darkMode") === "enabled") {
       htmlElement.classList.add("dark");
       themeToggle.checked = true;
-      // logo.src = "/images/white_logo.png";
       dot.style.transform = "translateX(-120%)";
       lightIcon.style.display = "block";
       darkIcon.style.display = "none";
       logos.forEach((logo) => (logo.src = "/images/white_logo.png"));
-      // fbI.src = "/images/socials/mingcute_facebook-line_d.png";
-      // waI.src = "/images/socials/ic_baseline-whatsapp_d.png";
-      // twI.src = "/images/socials/mingcute_twitter-line_d.png";
-      // tgI.src = "/images/socials/telegram_d.png";
-      // inI.src = "/images/socials/mdi_instagram_d.png";
     } else {
       htmlElement.classList.remove("dark");
       themeToggle.checked = false;
-      // logo.src = "/images/logo.png";
       logos.forEach((logo) => (logo.src = "/images/logo.png"));
       dot.style.transform = "translateX(0)";
       lightIcon.style.display = "none";
       darkIcon.style.display = "block";
-
-      // fbI.src = "/images/socials/mingcute_facebook-line.png";
-      // waI.src = "/images/socials/ic_baseline-whatsapp.png";
-      // twI.src = "/images/socials/mingcute_twitter-line.png";
-      // tgI.src = "/images/socials/telegram.png";
-      // inI.src = "/images/socials/mdi_instagram.png";
     }
 
     // Toggle the theme
@@ -383,19 +366,27 @@ document.addEventListener("DOMContentLoaded", () => {
       if (themeToggle.checked) {
         htmlElement.classList.add("dark");
         localStorage.setItem("darkMode", "enabled");
-        // logo.src = "/images/white_logo.png";
         logos.forEach((logo) => (logo.src = "/images/white_logo.png"));
         dot.style.transform = "translateX(-120%)";
-        lightIcon.style.display = "block";
-        darkIcon.style.display = "none";
+        cloud.classList.remove("cloud-out");
+        cloud.classList.add("cloud-in");
+
+        setTimeout(() => {
+          lightIcon.style.display = "block";
+          darkIcon.style.display = "none";
+        }, 100);
       } else {
         htmlElement.classList.remove("dark");
         localStorage.setItem("darkMode", "disabled");
-        // logo.src = "/images/logo.png";
         logos.forEach((logo) => (logo.src = "/images/logo.png"));
         dot.style.transform = "translateX(0)";
-        lightIcon.style.display = "none";
-        darkIcon.style.display = "block";
+        cloud.classList.remove("cloud-in");
+        cloud.classList.add("cloud-out");
+
+        setTimeout(() => {
+          lightIcon.style.display = "none";
+          darkIcon.style.display = "block";
+        }, 400);
       }
     });
   }
