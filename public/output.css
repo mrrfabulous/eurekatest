@@ -1722,10 +1722,6 @@ video {
   --lato: "Lato", sans-serif;
   --roboto: "Roboto", sans-serif;
   --script: "Caveat", cursive;
-
-  /* transition */
-  --transition-duration: 0.5s;
-  --transition-timing: ease-in-out;
 }
 
 * {
@@ -1762,19 +1758,6 @@ video {
   position: absolute;
 }
 
-html,
-.switchIcon,
-.eurekaLogo {
-  transition: background-color var(--transition-duration)
-      var(--transition-timing),
-    color var(--transition-duration) var(--transition-timing),
-    transform var(--transition-duration) var(--transition-timing);
-}
-
-.switchIcon {
-  transition: transform var(--transition-duration) var(--transition-timing);
-}
-
 body {
   width: 100%;
   max-width: 1440px;
@@ -1782,10 +1765,6 @@ body {
   margin-inline: auto;
   position: relative;
   font-family: var(--open-sans);
-  transition: background-color var(--transition-duration)
-      var(--transition-timing),
-    color var(--transition-duration) var(--transition-timing),
-    transform var(--transition-duration) var(--transition-timing);
 }
 
 /* Nav BAr */
@@ -1798,14 +1777,6 @@ body {
 #nav-bar ul li.active a,
 #mobileNav ul li.active a {
   color: var(--primary);
-}
-
-.cloud-in {
-  animation: slideIn 1.2s ease-in-out;
-}
-
-.cloud-out {
-  animation: slideOut 1s ease-in-out;
 }
 
 /* Morphisim  */
@@ -1829,7 +1800,6 @@ body {
   background: #fcaf00;
   position: relative;
 }
-
 .overlapped::after {
   content: "";
   position: absolute;
@@ -2187,28 +2157,6 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(-150%) translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0) translateY(100);
-    opacity: 1;
-  }
-}
-
-@keyframes slideOut {
-  from {
-    transform: translateX(-100%) translateY(-70%);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(-700%) translateY(-150%);
-    opacity: 0;
-  }
-}
-
 .focus-within\:border-2:focus-within {
   border-width: 2px;
 }
@@ -2516,6 +2464,12 @@ body {
     width: 58.333333%;
   }
 
+  .lg\:scale-90 {
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2602,4 +2556,8 @@ body {
 .dark\:text-white:where(.dark, .dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark\:opacity-90:where(.dark, .dark *) {
+  opacity: 0.9;
 }

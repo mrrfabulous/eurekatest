@@ -29,7 +29,7 @@
   </head>
 
   <body class="dark:bg-dark dark:text-white transition-all duration-1000">
-    <header class="sticky top-0 left-0 z-50 bg-secondary dark:bg-dark">
+    <header class="sticky top-0 left-0 z-50 bg-secondary dark:bg-dark transition-all duration-1000">
       <nav class="flex justify-between items-center py-5 container">
         <a class="translate-y-1" href="/">
           <img
@@ -48,7 +48,7 @@
             class="gap-3 relative items-center text-black dark:text-white hidden md:flex justify-between lg:gap-12"
           >
             <li class="font-sans font-bold hover:text-primary">
-              <a href="/">Home</a>
+              <a href="./">Home</a>
             </li>
             <li class="font-sans font-bold hover:text-primary">
               <a href="/#events">Event</a>
@@ -74,53 +74,51 @@
         </div>
 
         <!-- Toggle Switch -->
-        <label
-          class="flex items-center cursor-pointer absolute right-[20%] md:right-[25%] xl:right-[30%]"
-        >
-        <div class="relative">
-          <input id="theme-toggle" type="checkbox" class="sr-only" />
-          <!-- Switch Background -->
-          <div class="block bg-black w-[70px] h-9 rounded-full dark:bg-blue-200 transition-all duration-700"></div>
-          <div class="block bg-black w-[70px] h-9 rounded-full dark:hidden absolute top-0 left-0">
-            <div class="w-full h-full rounded-full relative">
-              <div class="bg-white absolute top-4 left-0 w-[3px] h-[3px] rounded-full"></div>
-              <div class="bg-white absolute top-1/3 left-4 w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute bottom-1/3 left-4 w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute top-[12%] left-[30%] w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute top-[78%] left-[35%] w-[2px] h-[2px] rounded-full"></div>
-              <div class="bg-white absolute top-[34%] left-[42%] w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute top-[5%] left-[40%] w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute top-[83%] left-[25%] w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute top-[29%] left-[20%] w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute top-[8%] left-[23%] w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute top-[76%] left-[37%] w-[2px] h-[2px] rounded-full"></div>
-              <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
-              <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
-              <div class="bg-white absolute top-[20%] left-[40%] w-[2px] h-[2px] rounded-full"></div>
-              <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
-              <div class="bg-white absolute bottom-[30%] left-[35%] w-[1px] h-[1px] rounded-full"></div>
-              <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
-</div>
-            </div>
-          </div>
-          <!-- Switch Icon -->
-          <div class="switchIcon absolute right-1 top-1 rounded-full transition-all ease-in-out h-7 w-7">
-            <div id="lightIcon" class="relative">
-              <img src="./images/icons/Toggle.png" alt=" ">
-              <img src="./images/icons/clouds.png" alt="" class="absolute scale-75 -right-2 top-1/2 -translate-y-1/2 cloud-in" id="cloud">
-            </div>
-            <div id="darkIcon" class="bg-white w-full h-full rounded-full hidden transition-all duration-500">
-              <div class="bg-dark w-full h-full rounded-full -translate-x-2 relative">
-                <div class="bg-white absolute top-[29%] left-[20%] w-[1.5px] h-[1.5px] rounded-full"></div>
-                <div class="bg-white absolute top-[8%] left-[23%] w-[1.5px] h-[1.5px] rounded-full"></div>
-                <div class="bg-white absolute top-[76%] left-[37%] w-[2px] h-[2px] rounded-full"></div>
-                <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
-                <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+        <label class="flex items-center cursor-pointer absolute right-[20%] md:right-[25%] xl:right-[30%] scale-75 lg:scale-90">
+          <div class="relative">
+              <input id="theme-toggle" type="checkbox" class="sr-only" />
+              <!-- Switch Background -->
+              <div class="block bg-black w-[70px] h-9 rounded-full dark:bg-blue-200 transition-all duration-700"></div>
+              <div class="block bg-black w-[70px] h-9 rounded-full dark:hidden absolute top-0 left-0">
+                <div class="w-full h-full rounded-full relative">
+                  <div class="bg-white absolute top-4 left-0 w-[3px] h-[3px] rounded-full"></div>
+                  <div class="bg-white absolute top-1/3 left-4 w-[1px] h-[1px] rounded-full"></div>
+                  <div class="bg-white absolute bottom-1/3 left-4 w-[1px] h-[1px] rounded-full"></div>
+                  <div class="bg-white absolute top-[12%] left-[30%] w-[1px] h-[1px] rounded-full"></div>
+                  <!-- <div class="bg-red-400 absolute top-[78%] left-[35%] w-[2px] h-[2px] rounded-full"></div> -->
+                  <!-- <div class="bg-red-400 absolute top-[34%] left-[42%] w-[1px] h-[1px] rounded-full"></div> -->
+                  <!-- <div class="bg-red-400 absolute top-[5%] left-[40%] w-[1px] h-[1px] rounded-full"></div> -->
+                  <!-- <div class="bg-red-400 absolute top-[83%] left-[25%] w-[1px] h-[1px] rounded-full"></div> -->
+                  <div class="bg-white absolute top-[29%] left-[20%] w-[1px] h-[1px] rounded-full"></div>
+                  <div class="bg-white absolute top-[8%] left-[23%] w-[1px] h-[1px] rounded-full"></div>
+                  <div class="bg-white absolute top-[76%] left-[37%] w-[2px] h-[2px] rounded-full"></div>
+                  <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+                  <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+                  <div class="bg-white absolute top-[20%] left-[40%] w-[2px] h-[2px] rounded-full"></div>
+                  <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+                  <div class="bg-white absolute bottom-[30%] left-[35%] w-[1px] h-[1px] rounded-full"></div>
+                  <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+  </div>
+                </div>
               </div>
-            </div>
+              <!-- Switch Icon -->
+              <div class="switchIcon absolute right-1 top-1 rounded-full transition-all ease-in-out h-7 w-7">
+                <div id="lightIcon" class="relative">
+                  <img src="./images/icons/Toggle.png" alt=" ">
+                  <img src="./images/icons/clouds.png" alt="" class="absolute scale-75 -right-2 top-1/2 -translate-y-1/2 cloud-in" id="cloud">
+                </div>
+                <div id="darkIcon" class="bg-white w-full h-full rounded-full hidden transition-all duration-500">
+                  <div class="bg-dark w-full h-full rounded-full -translate-x-2 relative">
+                    <div class="bg-white absolute top-[29%] left-[20%] w-[1.5px] h-[1.5px] rounded-full"></div>
+                    <div class="bg-white absolute top-[8%] left-[23%] w-[1.5px] h-[1.5px] rounded-full"></div>
+                    <div class="bg-white absolute top-[76%] left-[37%] w-[2px] h-[2px] rounded-full"></div>
+                    <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+                    <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+                  </div>
+                </div>
+              </div>
           </div>
-      </div>
-        </label>
+         </label>
 
         <!-- Mobile Nav Bar -->
         <div

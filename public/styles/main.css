@@ -107,7 +107,7 @@ body {
 }
 
 .cloud-in {
-  animation: slideIn 1.2s ease-in-out;
+  animation: slideIn 0.9s ease-in-out;
 }
 
 .cloud-out {
@@ -490,22 +490,22 @@ body {
 
 @keyframes slideIn {
   from {
-    transform: translateX(-150%) translateY(-100%);
+    transform: translateX(-150%) translateY(-100%) scale(0.5);
     opacity: 0;
   }
   to {
-    transform: translateX(0) translateY(100);
+    transform: translateX(0) translateY(100) scale(1);
     opacity: 1;
   }
 }
 
 @keyframes slideOut {
   from {
-    transform: translateX(-100%) translateY(-70%);
+    transform: translateX(-50%) translateY(-70%) scale(1);
     opacity: 1;
   }
   to {
-    transform: translateX(-700%) translateY(-150%);
+    transform: translateX(-800%) translateY(-150%) scale(0.1);
     opacity: 0;
   }
 }

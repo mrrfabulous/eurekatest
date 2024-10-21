@@ -31,11 +31,11 @@
   >
     <header class="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full container">
       <nav class="flex justify-between items-center py-5">
-        <a class="scale-75 translate-y-1" href="/">
+        <a class="" href="/">
           <img
             src="./images/logo.png"
             alt="Eureka"
-            class="eurekaLogo scale-150 translate-x-5 md:scale-100 md:translate-x-0"
+            class="eurekaLogo scale-150 translate-x-5 md:scale-100 md:-translate-x-5"
           />
         </a>
 
@@ -45,7 +45,7 @@
         >
           <ul class="flex gap-14 relative items-center">
             <li class="font-sans font-bold hover:text-primary">
-              <a href="/">Home</a>
+              <a href="./">Home</a>
             </li>
             <li class="font-sans font-bold hover:text-primary">
               <a href="#about">About Us</a>
@@ -71,7 +71,7 @@
 
         <!-- Toggle Switch -->
         <label
-          class="flex items-center cursor-pointer absolute right-[20%] md:right-[25%] xl:right-0"
+          class="flex items-center cursor-pointer absolute right-[20%] md:right-[25%] xl:right-0 scale-75 lg:scale-90"
         >
         <div class="relative">
           <input id="theme-toggle" type="checkbox" class="sr-only" />
@@ -102,8 +102,8 @@
           <!-- Switch Icon -->
           <div class="switchIcon absolute right-1 top-1 rounded-full transition-all ease-in-out h-7 w-7">
             <div id="lightIcon" class="relative">
-              <img src="./images/icons/Toggle.png" alt=" ">
-              <img src="./images/icons/clouds.png" alt="" class="absolute scale-75 -right-2 top-1/2 -translate-y-1/2 cloud-in" id="cloud">
+              <img src="/images/icons/Toggle.png" alt=" ">
+              <img src="/images/icons/clouds.png" alt="" class="absolute scale-75 -right-2 top-1/2 -translate-y-1/2 cloud-in" id="cloud">
             </div>
             <div id="darkIcon" class="bg-white w-full h-full rounded-full hidden transition-all duration-500">
               <div class="bg-dark w-full h-full rounded-full -translate-x-2 relative">
@@ -175,15 +175,15 @@
           class="max-h-full w-full object-cover"
         />
         <div
-          class="bg-[#E4F1FF] text-black max-w-md h-fit w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[20px] p-6 px-8 text-center pb-10"
+          class="bg-[#E4F1FF] text-black max-w-xs h-fit w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[20px] p-6 px-8 text-center"
         >
-          <h1 class="text-[28px] font-bold">Already signed up?</h1>
-          <p class="text-[20px] opacity-80 mt-5 mb-12">
+          <h1 class="text-[20px] font-bold">Already signed up?</h1>
+          <p class="text-[16px] opacity-80 mt-5 mb-5">
             Login your account so you can learn and explore more from Eureka.
           </p>
           <a
             href="./signIn.html"
-            class="text-[#006BE5] font-bold text-[20px] p-2 px-24 rounded-[25px] border-2 border-[#006BE5] cursor-pointer hover:bg-[#006BE5] hover:text-white transition ease-in-out duration-150"
+            class="text-[#006BE5] font-bold text-[12px] p-2 px-24 rounded-[25px] border-2 border-[#006BE5] cursor-pointer hover:bg-[#006BE5] hover:text-white transition ease-in-out duration-150"
           >
             LOG IN
           </a>
@@ -206,7 +206,7 @@
               Join the community and <br />become
               <span class="text-primary" id="text-container">an Advocate.</span>
             </h3>
-            <div class="mb-4">
+            <div class="mb-4 pt-5 mt-5">
               <label class="block text-black font-semibold dark:text-white"
                 >Full Name</label
               >
@@ -374,7 +374,7 @@
         <div
           class="flex-col flex items-center justify-center gap-10 h-full w-full"
         >
-          <img src="" alt="" />
+          <img src="./images/mail_sent.gif" alt="" />
 
           <div
             class="flex flex-col items-center w-full text-primary gap-3 dark:text-white"
