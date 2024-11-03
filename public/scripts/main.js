@@ -89,13 +89,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // popUp Function called inother functions
+  // popUp Function called in other functions
   function popUp() {
     const submitPopup = document.getElementById("submit_popup");
     const submitLoader = document.getElementById("submit_loader");
     const submitSuccess = document.getElementById("submit_success");
+    const closePopup = document.getElementById("close_popup");
+    const redirectHome = document.getElementById("redirect_home");
 
-    if (submitPopup && submitLoader && submitSuccess) {
+    if (
+      submitPopup &&
+      submitLoader &&
+      submitSuccess &&
+      closePopup &&
+      redirectHome
+    ) {
       submitPopup.classList.add("show");
       submitLoader.style.display = "block";
 
@@ -103,9 +111,14 @@ document.addEventListener("DOMContentLoaded", () => {
         submitLoader.style.display = "none";
         submitSuccess.style.display = "block";
 
-        setTimeout(() => {
+        closePopup.addEventListener("click", () => {
+          submitPopup.classList.remove("show");
+          submitSuccess.style.display = "none";
+        });
+
+        redirectHome.addEventListener("click", () => {
           window.location.href = "index.html";
-        }, 2000);
+        });
       }, 1000);
     } else {
       console.error("Popup elements not found.");
@@ -232,6 +245,42 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 400);
           }
         });
+      }, 3000);
+    }
+  }
+
+  // Text Animation 2
+  function initializeTextAnimation2() {
+    const textContainer = document.getElementById("text-container2");
+
+    if (textContainer) {
+      const texts = [
+        { text: "an Advocate.", colorClass: "color1" },
+        { text: "a Spokesman.", colorClass: "color2" },
+        { text: "a Patron.", colorClass: "color3" },
+      ];
+      let currentIndex = 0;
+      let forwardFlip = true;
+
+      setInterval(() => {
+        if (textContainer) {
+          textContainer.classList.add(
+            forwardFlip ? "flip-forward" : "flip-backward"
+          );
+
+          setTimeout(() => {
+            currentIndex = (currentIndex + 1) % texts.length;
+            textContainer.textContent = texts[currentIndex].text;
+            textContainer.classList.remove("color1", "color2", "color3");
+            textContainer.classList.add(texts[currentIndex].colorClass);
+
+            if (currentIndex === texts.length - 1) {
+              forwardFlip = !forwardFlip;
+            }
+
+            textContainer.classList.remove("flip-forward", "flip-backward");
+          }, 400);
+        }
       }, 3000);
     }
   }
@@ -439,6 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeNavBar();
   initializeRegistrationPage();
   initializeTextAnimation();
+  initializeTextAnimation2();
   initializePopUp("contactForm");
   initializePopUp("faq");
   initializePopUp("signInForm");

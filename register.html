@@ -29,122 +29,142 @@
   <body
     class="h-screen flex flex-col items-center justify-center relative overflow-hidden dark:bg-dark dark:text-white"
   >
-    <header class="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full container">
-      <nav class="flex justify-between items-center py-5">
-        <a class="scale-75 translate-y-1" href="/">
-          <img
-            src="/images/logo.png"
-            alt="Eureka"
-            class="eurekaLogo scale-150 translate-x-5 md:scale-100 md:translate-x-0"
-          />
-        </a>
+  <header class="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full container">
+    <nav class="flex justify-between items-center py-5">
+      <a class="" href="/">
+        <img
+          src="./images/logo.png"
+          alt="Eureka"
+          class="eurekaLogo translate-x-5 block md:hidden"
+        />
+        <img
+          src="./images/logo.png"
+          alt="Eureka"
+          class="eurekaLogo hidden md:block -translate-x-10"
+        />
+      </a>
 
-        <div
-          class="relative hidden md:flex items-center gap-6 justify-between min-w-[75%]"
-          id="nav-bar"
-        >
-          <ul class="flex gap-14 relative items-center">
-            <li class="font-sans font-bold hover:text-primary">
-              <a href="/">Home</a>
-            </li>
-            <li class="font-sans font-bold hover:text-primary">
-              <a href="#about">About Us</a>
-            </li>
-            <li class="font-sans font-bold hover:text-primary">
-              <a href="#events">Event</a>
-            </li>
+      <div
+        class="relative hidden md:flex items-center gap-6 justify-between min-w-[75%]"
+        id="nav-bar"
+      >
+        <ul class="flex gap-14 relative items-center">
+          <li class="font-sans font-bold hover:text-primary">
+            <a href="./">Home</a>
+          </li>
+          <li class="font-sans font-bold hover:text-primary">
+            <a href="./#about">About Us</a>
+          </li>
+          <li class="font-sans font-bold hover:text-primary">
+            <a href="./#events">Event</a>
+          </li>
 
-            <li class="text-white font-sans font-bold hover:text-black">
-              <a href="./contact.html">Programs</a>
-            </li>
-            <li class="text-white font-sans font-bold hover:text-black">
-              <a href="./contact.html">Contact Us</a>
-            </li>
-            <li class="text-white font-sans font-bold hover:text-black">
-              <a href="./faq.html">FAQ</a>
-            </li>
-            <li class="text-white font-sans font-bold hover:text-black">
-              <a href="./program.html">Blog</a>
-            </li>
-          </ul>
+          <li class="text-white font-sans font-bold hover:text-black">
+            <a href="./program.html">Programs</a>
+          </li>
+          <li class="text-white font-sans font-bold hover:text-black">
+            <a href="./contact.html">Contact Us</a>
+          </li>
+          <li class="text-white font-sans font-bold hover:text-black">
+            <a href="./faq.html">FAQ</a>
+          </li>
+          <li class="text-white font-sans font-bold hover:text-black">
+            <a href="./program.html">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Toggle Switch -->
+      <label
+        class="flex items-center cursor-pointer absolute right-[20%] md:right-[25%] xl:right-0 scale-75 lg:scale-90"
+      >
+      <div class="relative">
+        <input id="theme-toggle" type="checkbox" class="sr-only" />
+        <!-- Switch Background -->
+        <div class="block bg-black w-[70px] h-9 rounded-full dark:bg-blue-200 transition-all duration-700"></div>
+        <div class="block bg-black w-[70px] h-9 rounded-full dark:hidden absolute top-0 left-0">
+          <div class="w-full h-full rounded-full relative">
+            <div class="bg-white absolute top-4 left-0 w-[3px] h-[3px] rounded-full"></div>
+            <div class="bg-white absolute top-1/3 left-4 w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute bottom-1/3 left-4 w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute top-[12%] left-[30%] w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute top-[78%] left-[35%] w-[2px] h-[2px] rounded-full"></div>
+            <div class="bg-white absolute top-[34%] left-[42%] w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute top-[5%] left-[40%] w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute top-[83%] left-[25%] w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute top-[29%] left-[20%] w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute top-[8%] left-[23%] w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute top-[76%] left-[37%] w-[2px] h-[2px] rounded-full"></div>
+            <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+            <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+            <div class="bg-white absolute top-[20%] left-[40%] w-[2px] h-[2px] rounded-full"></div>
+            <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+            <div class="bg-white absolute bottom-[30%] left-[35%] w-[1px] h-[1px] rounded-full"></div>
+            <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+</div>
+          </div>
         </div>
-
-        <!-- Toggle Switch -->
-        <label
-          class="flex items-center cursor-pointer absolute right-[20%] md:right-[25%] xl:right-0"
-        >
-          <div class="relative">
-            <input id="theme-toggle" type="checkbox" class="sr-only" />
-            <!-- Switch Background -->
-            <div
-              class="block bg-black w-[70px] h-9 rounded-full dark:bg-blue-200 transition-all duration-150"
-            ></div>
-            <!-- Switch Icon -->
-            <div
-              class="switchIcon absolute right-1 top-1 rounded-full transition-transform h-7 w-7"
-            >
-              <div id="lightIcon" class="relative">
-                <img src="/images/icons/Toggle.png" alt="" />
-                <img
-                  src="/images/icons/clouds.png"
-                  alt=""
-                  class="absolute scale-75 -right-2 top-1/2 -translate-y-1/2"
-                />
-              </div>
-              <div
-                id="darkIcon"
-                class="bg-white w-full h-full rounded-full hidden"
-              >
-                <div
-                  class="bg-dark w-full h-full rounded-full -translate-x-2"
-                ></div>
-              </div>
+        <!-- Switch Icon -->
+        <div class="switchIcon absolute right-1 top-1 rounded-full transition-all ease-in-out h-7 w-7">
+          <div id="lightIcon" class="relative">
+            <img src="/images/icons/Toggle.png" alt=" ">
+            <img src="/images/icons/clouds.png" alt="" class="absolute scale-75 -right-2 top-1/2 -translate-y-1/2 cloud-in" id="cloud">
+          </div>
+          <div id="darkIcon" class="bg-white w-full h-full rounded-full hidden transition-all duration-500">
+            <div class="bg-dark w-full h-full rounded-full -translate-x-2 relative">
+              <div class="bg-white absolute top-[29%] left-[20%] w-[1.5px] h-[1.5px] rounded-full"></div>
+              <div class="bg-white absolute top-[8%] left-[23%] w-[1.5px] h-[1.5px] rounded-full"></div>
+              <div class="bg-white absolute top-[76%] left-[37%] w-[2px] h-[2px] rounded-full"></div>
+              <div class="bg-white absolute bottom-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
+              <div class="bg-white absolute top-[80%] right-[45%] w-[1.5px] h-[1.5px] rounded-full"></div>
             </div>
           </div>
-        </label>
+        </div>
+    </div>
+      </label>
 
-        <!-- Mobile Nav Bar -->
-        <div
-          class="container absolute top-24 left-0 w-full py-10 hidden flex-col items-start justify-center gap-6 rounded-lg bg-secondary md:hidden"
-          id="mobileNav"
+      <!-- Mobile Nav Bar -->
+      <div
+        class="container absolute top-24 left-0 w-full py-10 hidden flex-col items-start justify-center gap-6 rounded-lg bg-secondary dark:bg-dark md:hidden"
+        id="mobileNav"
+      >
+        <ul
+          class="flex flex-col gap-12 md:relative md:flex-row md:items-center"
         >
-          <ul
-            class="flex flex-col gap-12 md:relative md:flex-row md:items-center"
-          >
-            <li class="font-sans font-bold hover:text-primary active">
-              <a href="/">Home</a>
-            </li>
-            <li class="font-sans font-bold hover:text-primary">
-              <a href="#about">About Us</a>
-            </li>
-            <li class="font-sans font-bold hover:text-primary">
-              <a href="#events">Event</a>
-            </li>
+          <li class="font-sans font-bold hover:text-primary active">
+            <a href="/">Home</a>
+          </li>
+          <li class="font-sans font-bold hover:text-primary">
+            <a href="#about">About Us</a>
+          </li>
+          <li class="font-sans font-bold hover:text-primary">
+            <a href="#events">Event</a>
+          </li>
 
-            <li class="font-sans font-bold hover:text-primary">
-              <a href="./contact.html">Contact Us</a>
-            </li>
-            <li class="font-sans font-bold hover:text-primary">
-              <a href="./faq.html">FAQ</a>
-            </li>
-            <li class="font-sans font-bold hover:text-primary">
-              <a href="./program.html">Blog</a>
-            </li>
-          </ul>
-          <button
-            class="bg-primary mt-3 p-3 px-6 rounded-[2rem] font-lato font-bold text-white cursor-pointer hover:opacity-90 scale-105"
-          >
-            <a href="register.html"> Become an Advocate </a>
-          </button>
-        </div>
+          <li class="font-sans font-bold hover:text-primary">
+            <a href="./contact.html">Contact Us</a>
+          </li>
+          <li class="font-sans font-bold hover:text-primary">
+            <a href="./faq.html">FAQ</a>
+          </li>
+          <li class="font-sans font-bold hover:text-primary">
+            <a href="./program.html">Blog</a>
+          </li>
+        </ul>
+        <button
+          class="bg-primary mt-3 p-3 px-6 rounded-[2rem] font-lato font-bold text-white cursor-pointer hover:opacity-90 scale-105"
+        >
+          <a href="register.html"> Become an Advocate </a>
+        </button>
+      </div>
 
-        <div class="block md:hidden">
-          <span class="material-symbols-outlined" id="openMenu">
-            &#xe5d2;
-          </span>
-        </div>
-      </nav>
-    </header>
+      <div class="block md:hidden">
+        <span class="material-symbols-outlined" id="openMenu">
+          &#xe5d2;
+        </span>
+      </div>
+    </nav>
+  </header>
 
     <section
       class="flex flex-col md:flex-row-reverse gap-10 h-full w-full items-center justify-center"
@@ -181,7 +201,7 @@
         class="w-full h-full md:w-1/2 flex flex-col p-8 lg:px-12 rounded-lg pt-28 pb-0"
       >
         <div
-          class="h-fit overflow-y-scroll hide-scrollbar flex flex-col justify-start"
+          class="h-fit overflow-y-scroll hide-scrollbar flex flex-col justify-start px-1"
         >
           <!-- form one -->
           <form id="signUpForm" class="form mb-5">
@@ -212,20 +232,27 @@
                 type="text"
                 placeholder="Male"
                 required
-                class="p-2 px-5 border rounded-full w-full bg-transparent"
+                class="p-2 px-5 border rounded-full w-full bg-transparent appearance-none dark:bg-dark dark:text-white"
               />
             </div>
             <div class="mb-4">
               <label class="block text-black font-semibold dark:text-white"
                 >Institution</label
               >
-              <input
-                id="leader-attributes"
-                type="text"
-                placeholder="Harvard"
-                required
-                class="p-2 px-5 border rounded-full w-full bg-transparent"
-              />
+              <select
+              id="institution"
+              required
+              class="p-2 px-5 border rounded-full w-full bg-transparent appearance-none dark:bg-dark dark:text-white"
+            >
+              <option value="" class="opacity-20">Select Institution</option>
+              <option value="">Minna</option>
+              <option value="">ABU Zaria</option>
+              <option value="">University of Lagos</option>
+              <option value="">University of Benin</option>
+              <option value="">University of Jos</option>
+              <option value="" class="opacity-50">Covenant University</option>
+              
+            </select>
             </div>
             <div class="mb-4">
               <label class="block text-black font-semibold dark:text-white"

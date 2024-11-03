@@ -344,3 +344,19 @@ export const sports = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laudantium, fuga maxime ex natus quo saepe facilis nam recusandae non aliquid voluptatum minus ipsa voluptatibus tempora, in amet. Vel fuga doloribus, quis ad nemo animi voluptatum dolorum aperiam similique, totam consequatur, vitae ratione illum adipisci minima repellat qui ipsa! Asperiores natus corrupti iste recusandae quidem quas, placeat, quis, maxime sapiente blanditiis assumenda nam suscipit distinctio aspernatur? Ut, incidunt facilis. Delectus accusamus, dolor ad obcaecati atque quas placeat explicabo consequatur facilis officia dolores enim molestias hic, magni cum numquam similique eos quod reprehenderit temporibus laudantium alias culpa natus est. Cumque, dolorum?",
   },
 ];
+
+export const institutions = [
+  "Minna",
+  "ABU Zaria",
+  "Bayero University Kano",
+  "University of Benin",
+  "Lagos State University",
+  "Yaba Tech",
+];
+
+export const eurekaSources = [
+  "Social Media",
+  "Friend",
+  "Event",
+  "Advertisement",
+];

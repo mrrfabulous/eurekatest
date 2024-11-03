@@ -8,7 +8,7 @@
 
 :root {
   /* Colors */
-  --primary: #0279b9;
+  --primary: #3b88ff;
   --secondary: #f4f4f4;
   --accent: #fcbf49;
   --pp: #a60874;
@@ -203,7 +203,7 @@ body {
 
 .event-card {
   width: 100%;
-  background: #0279b980;
+  background: rgba(59, 136, 255, 0.7);
   color: #fff;
   padding-inline: 2rem;
   padding-block-start: 2em;
@@ -220,7 +220,8 @@ body {
 }
 
 .event-card:nth-child(odd) {
-  background: #a6087480;
+  background: rgba(166, 8, 116, 0.8); /* rgba format*/
+  /* background: #a6087480; HEX format */
 }
 
 .default {
@@ -239,12 +240,24 @@ body {
   display: none;
 }
 
-/* text animation sign up page */
+/* text animation sign up or registration page */
 .text-flip-container {
   perspective: 900px;
 }
 
+.text-flip-container2 {
+  perspective: 900px;
+}
+
 #text-container {
+  transition: transform 0.5s, background-color 0.5s, color 0.5s;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transform-origin: center;
+  display: inline-block;
+}
+
+#text-container2 {
   transition: transform 0.5s, background-color 0.5s, color 0.5s;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -282,7 +295,7 @@ body {
   display: none;
 }
 
-/* Slider dots for sign up page */
+/* Slider dots for sign up/registration page */
 .dot {
   background: #cecaca;
   width: 10px;

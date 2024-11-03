@@ -315,10 +315,10 @@
                 required
               ></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group w-full">
               <button
                 type="submit"
-                class="bg-primary w-48 py-3 font-bold text-white text-lg rounded-full cursor-pointer hover:opacity-80 hover:scale-105"
+                class="bg-primary w-full py-3 font-bold text-white text-lg rounded-full cursor-pointer hover:opacity-80 hover:scale-105"
               >
                 Send
               </button>
@@ -328,43 +328,37 @@
       </div>
 
       <!-- POPUP animation -->
-      <div class="submit_popup" id="submit_popup">
-        <!-- Loader -->
-        <div
-          class="submit_loader flex justify-center items-center"
-          id="submit_loader"
-        >
-          <div class="flex items-center justify-center h-full w-full">
-            <img
-              src="./images/loader.gif"
-              class="object-cover"
-              alt="preloader"
-            />
-          </div>
+    <div class="submit_popup" id="submit_popup">
+      <!-- Loader -->
+      <div class="submit_loader flex justify-center items-center" id="submit_loader">
+        <div class="flex items-center justify-center h-full w-full">
+          <img src="./images/loader.gif" class="object-cover" alt="preloader" />
         </div>
-        <!-- Popup  -->
-        <div
-          class="submit_success container bg-white rounded-xl w-full h-fit max-w-[580px] items-center justify-center translate-y-5 py-12 dark:bg-dark"
-          id="submit_success"
-        >
-          <div
-            class="flex-col flex items-center justify-center gap-10 h-full w-full"
-          >
-            <img src="./images/mail_sent.gif" alt="success" />
-
-            <div
-              class="flex flex-col items-center w-full text-primary gap-3 dark:text-white"
-            >
-              <p class="font-semibold text-center text-xl">
-                Question Successfully sent!
-              </p>
-              <p class="font-semibold text-center text-lg">
-                We get back to you via email, thank you.
-              </p>
-            </div>
+      </div>
+      <!-- Popup  -->
+      <div class="submit_success container bg-white rounded-xl w-full h-fit max-w-[580px] items-center justify-center translate-y-5 py-12 dark:bg-dark relative" id="submit_success">
+        <button 
+          class="absolute top-0 right-0 text-black dark:text-white font-bold text-3xl p-5 rounded-full  flex items-center justify-center cursor-pointer hover:opacity-90" 
+          id="close_popup"
+        >&times;
+      </button>
+        <div class="flex-col flex items-center justify-center gap-10 h-full w-full">
+          <img src="./images/mail_sent.gif" alt="" />
+          <div class="flex flex-col items-center w-full text-primary gap-3 dark:text-white">
+            <p class="font-semibold text-center text-xl">
+              Question Successfully sent!
+            </p>
+            <p class="font-semibold text-center text-lg">
+              We get back to you via email, thank you.
+            </p>
+            <button class="mt-4 bg-primary text-white px-4 py-2 rounded-md" id="redirect_home">Go to Home</button>
           </div>
         </div>
       </div>
+    </div>
+
     </section>
   </body>
 </html>
+
+  

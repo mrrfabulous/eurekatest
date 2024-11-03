@@ -29,16 +29,20 @@
   <body
     class="h-screen flex flex-col items-center justify-center relative overflow-hidden dark:bg-dark dark:text-white transition-all duration-1000"
   >
-    <header class="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full container">
-      <nav class="flex justify-between items-center py-5">
-        <a class="" href="/">
-          <img
-            src="./images/logo.png"
-            alt="Eureka"
-            class="eurekaLogo scale-150 translate-x-5 md:scale-100 md:-translate-x-5"
-          />
-        </a>
-
+  <header class="fixed top-0 left-1/2 -translate-x-1/2 z-50 w-full container pl-0">
+    <nav class="flex justify-between items-center py-5">
+      <a class="" href="/">
+        <img
+          src="./images/logo.png"
+          alt="Eureka"
+          class="eurekaLogo translate-x-5 block md:hidden"
+        />
+        <img
+          src="./images/logo.png"
+          alt="Eureka"
+          class="eurekaLogo hidden md:block -translate-x-10"
+        />
+      </a>
         <div
           class="relative hidden md:flex items-center gap-6 justify-between min-w-[75%]"
           id="nav-bar"
@@ -48,14 +52,14 @@
               <a href="./">Home</a>
             </li>
             <li class="font-sans font-bold hover:text-primary">
-              <a href="#about">About Us</a>
+              <a href="./#about">About Us</a>
             </li>
             <li class="font-sans font-bold hover:text-primary">
-              <a href="#events">Event</a>
+              <a href="./#events">Event</a>
             </li>
 
             <li class="text-white font-sans font-bold hover:text-black">
-              <a href="./contact.html">Programs</a>
+              <a href="./program.html">Programs</a>
             </li>
             <li class="text-white font-sans font-bold hover:text-black">
               <a href="./contact.html">Contact Us</a>
@@ -120,7 +124,7 @@
 
         <!-- Mobile Nav Bar -->
         <div
-          class="container absolute top-24 left-0 w-full py-10 hidden flex-col items-start justify-center gap-6 rounded-lg bg-secondary md:hidden"
+          class="container absolute top-24 left-0 w-full py-10 hidden flex-col items-start justify-center gap-6 rounded-lg bg-secondary dark:bg-dark md:hidden"
           id="mobileNav"
         >
           <ul
@@ -149,7 +153,7 @@
           <button
             class="bg-primary mt-3 p-3 px-6 rounded-[2rem] font-lato font-bold text-white cursor-pointer hover:opacity-90 scale-105"
           >
-            <a href="register.html"> Become an Advocate </a>
+            <a href="./signIn.html"> Sign in </a>
           </button>
         </div>
 
@@ -172,224 +176,234 @@
           id="register-image"
           src="./images//team.png"
           alt="Register"
-          class="max-h-full w-full object-cover"
+          class="max-h-full w-full object-cover -z-10"
         />
         <div
-          class="bg-[#E4F1FF] text-black max-w-xs h-fit w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[20px] p-6 px-8 text-center"
+          class="bg-[#E4F1FF] text-black max-w-xs h-fit w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[20px] p-5 text-center flex flex-col items-center justify-center gap-3"
         >
           <h1 class="text-[20px] font-bold">Already signed up?</h1>
-          <p class="text-[16px] opacity-80 mt-5 mb-5">
+          <p class="text-[14px] opacity-80">
             Login your account so you can learn and explore more from Eureka.
           </p>
           <a
             href="./signIn.html"
-            class="text-[#006BE5] font-bold text-[12px] p-2 px-24 rounded-[25px] border-2 border-[#006BE5] cursor-pointer hover:bg-[#006BE5] hover:text-white transition ease-in-out duration-150"
+            class="text-[#006BE5] font-bold text-[12px] p-2 px-24 rounded-[25px] border-2 border-[#006BE5] cursor-pointer hover:bg-[#006BE5] hover:text-white transition-all ease-in-out duration-200"
           >
             LOG IN
           </a>
         </div>
       </div>
 
-      <!-- Forms -->
-      <div
-        id="form-container"
-        class="w-full h-full md:w-1/2 flex flex-col p-8 lg:px-12 rounded-lg pt-28 pb-0"
+    
+     <!-- Forms -->
+    <div
+      id="form-container"
+      class="w-full h-full md:w-1/2 flex flex-col p-8 lg:px-12 rounded-lg pt-28 pb-0"
+    >
+    <div
+      class="h-fit overflow-y-scroll hide-scrollbar flex flex-col justify-start px-1"
+    >
+      <!-- form one -->
+      <form id="signUpForm" class="form mb-5">
+        <h3
+        class="text-xl lg:text-3xl font-bold mb-10 tracking-wider lg:text-start text-flip-container"
       >
-        <div
-          class="h-fit overflow-y-scroll hide-scrollbar flex flex-col justify-start"
-        >
-          <!-- form one -->
-          <form id="signUpForm" class="form mb-5">
-            <h3
-              class="text-xl lg:text-3xl font-bold mb-6 tracking-wider lg:text-start text-flip-container"
-            >
-              Join the community and <br />become
-              <span class="text-primary" id="text-container">an Advocate.</span>
-            </h3>
-            <div class="mb-4 pt-5 mt-5">
-              <label class="block text-black font-semibold dark:text-white"
-                >Full Name</label
-              >
-              <input
-                id="leadership-experience"
-                type="text"
-                required
-                placeholder="John Doe"
-                class="p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="mb-4">
-              <label class="block text-black font-semibold dark:text-white"
-                >Gender</label
-              >
-              <input
-                id="leadership-position"
-                type="text"
-                placeholder="Male"
-                required
-                class="p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="mb-4">
-              <label class="block text-black font-semibold dark:text-white"
-                >Institution</label
-              >
-              <input
-                id="leader-attributes"
-                type="text"
-                placeholder="Harvard"
-                required
-                class="p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="mb-4">
-              <label class="block text-black font-semibold dark:text-white"
-                >Level</label
-              >
-              <input
-                id="how-know-eureka"
-                type="text"
-                placeholder="300"
-                required
-                class="p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="mb-4">
-              <label class="block text-black font-semibold dark:text-white"
-                >Current CGPA</label
-              >
-              <input
-                id="how-know-eureka"
-                type="text"
-                placeholder="4.34"
-                required
-                class="p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="form-group w-full">
-              <button
-                id="continue-button"
-                type="button"
-                class="bg-primary w-full text-white px-4 mt-5 py-2 rounded-full disabled:bg-[#D9D9D9] disabled:text-gray-500 disabled:cursor-not-allowed"
-                disabled
-              >
-                Continue
-              </button>
-            </div>
-          </form>
+        Join the community and <br />become
+        <span class="text-primary" id="text-container">an Advocate.</span>
+      </h3>
 
-          <!-- Form two -->
-          <form id="second-form" class="form hidden">
-            <h3
-              class="text-xl lg:text-3xl font-bold mb-6 tracking-wider lg:text-start text-flip-container"
-            >
-              Join the community and <br />become
-              <span class="text-primary" id="text-container2">an Advocate</span>
-            </h3>
-            <div class="mb-4">
-              <label class="block text-black font-semibold dark:text-white"
-                >Do you have a leadership experience in the institution?</label
-              >
-              <input
-                id="advocate-reason"
-                type="text"
-                required
-                placeholder="Your reason"
-                class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="mb-4">
-              <label class="block text-black font-semibold dark:text-white"
-                >If yes, which position was that?</label
-              >
-              <input
-                id="leadership-experience"
-                type="text"
-                required
-                placeholder="Yes"
-                class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="mb-4">
-              <label class="block text-black font-semibold dark:text-white"
-                >Give us your three attributes of a leader you find dear.</label
-              >
-              <input
-                id="leadership-position"
-                type="text"
-                required
-                placeholder="SUG President"
-                class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="mb-4">
-              <label class="block text-black font-semibold dark:text-white"
-                >Tell us how you know about Eureka.</label
-              >
-              <input
-                id="leader-attributes"
-                type="text"
-                required
-                placeholder="Money minded, Disciplined, Smart."
-                class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
-              />
-            </div>
-            <div class="form-group w-full">
-              <button
-                id="apply-button"
-                type="button"
-                class="bg-primary w-full text-white px-4 py-2 mt-5 rounded-full disabled:bg-[#D9D9D9] disabled:text-gray-500 disabled:cursor-not-allowed"
-                disabled
-              >
-                Apply
-              </button>
-            </div>
-          </form>
-
-          <!-- Dots -->
-          <div class="flex justify-center mt-4 mb-8">
-            <span id="dot1" class="dot active"></span>
-            <span id="dot2" class="dot"></span>
-          </div>
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >Full Name</label
+          >
+          <input
+            id="leadership-experience"
+            type="text"
+            required
+            placeholder="John Doe"
+            class="p-2 px-5 border rounded-full w-full bg-transparent"
+          />
         </div>
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >Gender</label
+          >
+          <select
+            id="gender"
+            required
+            class="p-2 px-5 border rounded-full w-full bg-transparent appearance-none dark:bg-dark dark:text-white"
+          >
+            <option value="" class="opacity-20">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >Institution</label
+          >
+          <select
+            id="institution"
+            required
+            class="p-2 px-5 border rounded-full w-full bg-transparent appearance-none dark:bg-dark dark:text-white"
+          >
+            <option value="" class="opacity-20">Select Institution</option>
+            <option value="" class="">Minna</option>
+            <option value="" class="">ABU Zaria</option>
+            <option value="" class="">University of Lagos</option>
+            <option value="" class="">University of Benin</option>
+            <option value="" class="">University of Jos</option>
+            <option value="" class="">Covenant University</option>
+            
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >Level</label
+          >
+          <input
+            id="level"
+            type="text"
+            placeholder="300"
+            required
+            class="p-2 px-5 border rounded-full w-full bg-transparent"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >Current CGPA</label
+          >
+          <input
+            id="cgpa"
+            type="text"
+            placeholder="4.34"
+            required
+            class="p-2 px-5 border rounded-full w-full bg-transparent"
+          />
+        </div>
+        <div class="form-group w-full">
+          <button
+            id="continue-button"
+            type="button"
+            class="bg-primary w-full text-white px-4 mt-5 py-2 rounded-full disabled:bg-[#D9D9D9] disabled:text-gray-500 disabled:cursor-not-allowed"
+            disabled
+          >
+            Continue
+          </button>
+        </div>
+      </form>
+
+      <!-- Form two -->
+      <form id="second-form" class="form hidden">
+        <h3
+        class="text-xl lg:text-3xl font-bold mb-10 tracking-wider lg:text-start text-flip-container2"
+      >
+        Join the community and <br />become
+        <span class="text-primary" id="text-container2">an Advocate.</span>
+      </h3>
+
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >Do you have a leadership experience in the institution?</label
+          >
+          <input
+            id="leadership-experience"
+            type="text"
+            required
+            placeholder="Your reason"
+            class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >If yes, which position was that?</label
+          >
+          <input
+            id="leadership-position"
+            type="text"
+            required
+            placeholder="Yes"
+            class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >Give us your three attributes of a leader you find dear.</label
+          >
+          <input
+            id="leader-attributes"
+            type="text"
+            required
+            placeholder="Money minded, Disciplined, Smart."
+            class="mt-2 p-2 px-5 border rounded-full w-full bg-transparent"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-black font-semibold dark:text-white"
+            >Tell us how you know about Eureka.</label
+          >
+          <select
+            id="how-know-eureka"
+            required
+            class="p-2 px-5 border rounded-full w-full bg-transparent appearance-none dark:bg-dark dark:text-white"
+          >
+            <option value="" class="opacity-20">Select Option</option>
+            <option value="">Friends</option>
+            <option value="">Family</option>
+            <option value="">Social Media</option>
+            <option value="">Event</option>
+            
+          </select>
+        </div>
+        <div class="form-group w-full">
+          <button
+            id="apply-button"
+            type="button"
+            class="bg-primary w-full text-white px-4 py-2 mt-5 rounded-full disabled:bg-[#D9D9D9] disabled:text-gray-500 disabled:cursor-not-allowed"
+            disabled
+          >
+            Apply
+          </button>
+        </div>
+      </form>
+
+      <!-- Dots -->
+      <div class="flex justify-center mt-4 mb-8">
+        <span id="dot1" class="dot active"></span>
+        <span id="dot2" class="dot"></span>
       </div>
+    </div>
+    </div>
+
     </section>
 
     <!-- POPUP animation -->
     <div class="submit_popup" id="submit_popup">
       <!-- Loader -->
-      <div
-        class="submit_loader flex justify-center items-center"
-        id="submit_loader"
-      >
+      <div class="submit_loader flex justify-center items-center" id="submit_loader">
         <div class="flex items-center justify-center h-full w-full">
           <img src="./images/loader.gif" class="object-cover" alt="preloader" />
         </div>
       </div>
       <!-- Popup  -->
-      <div
-        class="submit_success container bg-white rounded-xl w-full h-fit max-w-[580px] items-center justify-center translate-y-5 py-12 dark:bg-dark"
-        id="submit_success"
-      >
-        <div
-          class="flex-col flex items-center justify-center gap-10 h-full w-full"
-        >
+      <div class="submit_success container bg-white rounded-xl w-full h-fit max-w-[580px] items-center justify-center translate-y-5 py-12 dark:bg-dark relative" id="submit_success">
+        <button 
+          class="absolute top-0 right-0 text-black dark:text-white font-bold text-3xl p-5 rounded-full  flex items-center justify-center cursor-pointer hover:opacity-90" 
+          id="close_popup"
+        >&times;
+      </button>
+        <div class="flex-col flex items-center justify-center gap-10 h-full w-full">
           <img src="./images/mail_sent.gif" alt="" />
-
-          <div
-            class="flex flex-col items-center w-full text-primary gap-3 dark:text-white"
-          >
-            <h1 class="font-bold text-center text-3xl pb-2">
-              Registration Successful!
-            </h1>
-            <!-- <p class="font-semibold text-center text-lg">
-              We get back to you via email, thank you.
-            </p> -->
+          <div class="flex flex-col items-center w-full text-primary gap-3 dark:text-white">
+            <h1 class="font-bold text-center text-3xl pb-2">Registration Successful!</h1>
+            <!-- <p class="font-semibold text-center text-lg">We get back to you via email, thank you.</p> -->
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" id="redirect_home">Go to Home</button>
           </div>
         </div>
       </div>
     </div>
+<script src="./scripts/main.js"></script>
 
-    <script src="./scripts/main.js"></script>
   </body>
 </html>
